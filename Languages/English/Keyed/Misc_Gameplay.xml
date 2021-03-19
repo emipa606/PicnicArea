@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PicnicAreaTemperatureRange>Temperature range</PicnicAreaTemperatureRange>
+  <PicnicAreaTemperatureRangeDesc>Valid temperature ranges for having a picnic</PicnicAreaTemperatureRangeDesc>
+  <PicnicAreaTimeRange>Time of day range</PicnicAreaTimeRange>
+  <PicnicAreaTimeRangeDesc>Valid times of the day for having a picnic</PicnicAreaTimeRangeDesc>
+  <PicnicAreaStartTime>Start time</PicnicAreaStartTime>
+  <PicnicAreaStopTime>Stop time</PicnicAreaStopTime>
+  <PicnicAreaZone>Picnic Area</PicnicAreaZone>
+  <PicnicAreaZoneDesc>Create a zone where your colonists will eat and enjoy the outdoors. The area needs sittable furniture but not tables. It will only be used in fine weather.</PicnicAreaZoneDesc>
+</LanguageData>

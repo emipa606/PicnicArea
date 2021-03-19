@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationInsert">
+    <xpath>/Defs/DesignationCategoryDef[defName = "Zone"]/specialDesignatorClasses/li[5]</xpath>
+    <value>
+      <li>PicnicArea.Designator_ZoneAdd_PicnicArea</li>
+    </value>
+  </Operation>
+</Patch>
