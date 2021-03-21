@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PicnicAreaTemperatureRange>气温范围</PicnicAreaTemperatureRange>
+  <PicnicAreaTemperatureRangeDesc>适宜进行野餐的温度范围</PicnicAreaTemperatureRangeDesc>
+  <PicnicAreaTimeRange>时间范围</PicnicAreaTimeRange>
+  <PicnicAreaTimeRangeDesc>适宜进行野餐的时间范围</PicnicAreaTimeRangeDesc>
+  <PicnicAreaStartTime>起始时刻</PicnicAreaStartTime>
+  <PicnicAreaStopTime>终点时刻</PicnicAreaStopTime>
+  <PicnicAreaZone>野餐区</PicnicAreaZone>
+  <PicnicAreaZoneDesc>创建一个殖民者在外享受食物的区域。该区域无需桌子但依旧需求椅子。仅在好天气时可用。</PicnicAreaZoneDesc>
+</LanguageData>

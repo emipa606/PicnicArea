@@ -27,11 +27,12 @@ Inspired by the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1528
 Settings for time of day and temperature
 Pawns will not picnic if its bad weather
 Picnic area needs seating but not tables
+If conditions are met and there are regular dining-areas available there is a 50% chance that they will eat at a picnic-area. If there are no available dining-areas they will always try to eat outside, if the conditions are met.
 
 [table]
     [tr]
         [td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
-        [td][url=https://github.com/emipa606/O21Rimhammer40K][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+        [td][url=https://github.com/emipa606/PicnicArea][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
     [/tr]
 [/table]
 	
