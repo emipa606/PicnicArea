@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Picnic Area</name>
   <packageId>Mlie.PicnicArea</packageId>
@@ -6,6 +6,7 @@
   <url>https://github.com/emipa606/PicnicArea</url>
   <supportedVersions>
     <li>1.2</li>
+    <li>1.3</li>
   </supportedVersions>
   <modDependencies>
     <li>
@@ -21,13 +22,15 @@
   <description>[img]https://i.imgur.com/WAEzk68.png[/img]
 
 Mod that adds a picnic-area for pawns to eat in. 
-If they do, they will not get the "Ate without table-debuff"
+If they do, they will not get the &quot;Ate without table-debuff&quot;
 Inspired by the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1528586050]Picnic Spot[/url] mod by cucumpear
 
 Settings for time of day and temperature
 Pawns will not picnic if its bad weather
 Picnic area needs seating but not tables
 If conditions are met and there are regular dining-areas available there is a 50% chance that they will eat at a picnic-area. If there are no available dining-areas they will always try to eat outside, if the conditions are met.
+
+Chinese translation added by HawnHan
 
 [table]
     [tr]
