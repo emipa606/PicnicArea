@@ -1,15 +1,14 @@
 ﻿using RimWorld;
 
-namespace PicnicArea
-{
-    [DefOf]
-    public static class PicnicAreaThoughtDefOf
-    {
-        public static ThoughtDef AteAtPicnicArea;
+namespace PicnicArea;
 
-        static PicnicAreaThoughtDefOf()
-        {
-            DefOfHelper.EnsureInitializedInCtor(typeof(ThoughtDefOf));
-        }
+[DefOf]
+public static class PicnicAreaThoughtDefOf
+{
+    public static ThoughtDef AteAtPicnicArea;
+
+    static PicnicAreaThoughtDefOf()
+    {
+        DefOfHelper.EnsureInitializedInCtor(typeof(ThoughtDefOf));
     }
 }

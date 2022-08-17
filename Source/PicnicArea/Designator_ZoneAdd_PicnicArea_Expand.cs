@@ -1,12 +1,11 @@
 ﻿using Verse;
 
-namespace PicnicArea
+namespace PicnicArea;
+
+public class Designator_ZoneAdd_PicnicArea_Expand : Designator_ZoneAdd_PicnicArea
 {
-    public class Designator_ZoneAdd_PicnicArea_Expand : Designator_ZoneAdd_PicnicArea
+    public Designator_ZoneAdd_PicnicArea_Expand()
     {
-        public Designator_ZoneAdd_PicnicArea_Expand()
-        {
-            defaultLabel = "DesignatorZoneExpand".Translate();
-        }
+        defaultLabel = "DesignatorZoneExpand".Translate();
     }
 }

@@ -3,9 +3,12 @@
   <PicnicAreaTemperatureRange>Temperature range</PicnicAreaTemperatureRange>
   <PicnicAreaTemperatureRangeDesc>Valid temperature ranges for having a picnic</PicnicAreaTemperatureRangeDesc>
   <PicnicAreaTimeRange>Time of day range</PicnicAreaTimeRange>
+  <PicnicAreaAllWeather>Picnic in any weather</PicnicAreaAllWeather>
   <PicnicAreaTimeRangeDesc>Valid times of the day for having a picnic</PicnicAreaTimeRangeDesc>
   <PicnicAreaStartTime>Start time</PicnicAreaStartTime>
   <PicnicAreaStopTime>Stop time</PicnicAreaStopTime>
+  <PicnicAreaVerboseLogging>Verbose logging</PicnicAreaVerboseLogging>
   <PicnicAreaZone>Picnic Area</PicnicAreaZone>
   <PicnicAreaZoneDesc>Create a zone where your colonists will eat and enjoy the outdoors. The area needs sittable furniture but not tables. It will only be used in fine weather.</PicnicAreaZoneDesc>
+  <PicnicAreaModVersion>Installed mod-version: {0}</PicnicAreaModVersion>
 </LanguageData>
