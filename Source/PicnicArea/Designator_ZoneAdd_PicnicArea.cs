@@ -31,17 +31,7 @@ public class Designator_ZoneAdd_PicnicArea : Designator_ZoneAdd
             return false;
         }
 
-        if (c.GetTerrain(Map).HasTag("Water"))
-        {
-            return false;
-        }
-
-        if (!c.UsesOutdoorTemperature(Map))
-        {
-            return false;
-        }
-
-        return true;
+        return !c.GetTerrain(Map).HasTag("Water") && c.UsesOutdoorTemperature(Map);
     }
 
     protected override Zone MakeNewZone()

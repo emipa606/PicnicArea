@@ -171,11 +171,6 @@ public static class Toils_Ingest_CarryIngestibleToChewSpot_Patch
             return false;
         }
 
-        if (thing.HostileTo(pawn))
-        {
-            return false;
-        }
-
-        return true;
+        return !thing.HostileTo(pawn);
     }
 }

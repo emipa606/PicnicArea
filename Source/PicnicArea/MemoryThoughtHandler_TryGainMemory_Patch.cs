@@ -20,11 +20,6 @@ public static class MemoryThoughtHandler_TryGainMemory_Patch
             return true;
         }
 
-        if (!PicnicArea.VerifyPicnicConditions(__instance.pawn.Map))
-        {
-            return true;
-        }
-
-        return false;
+        return !PicnicArea.VerifyPicnicConditions(__instance.pawn.Map);
     }
 }

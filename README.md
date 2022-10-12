@@ -8,7 +8,7 @@ If they do, they will not get the "Ate without table-debuff"
 Inspired by the https://steamcommunity.com/sharedfiles/filedetails/?id=1528586050]Picnic Spot mod by cucumpear
 
 Settings for time of day and temperature
-Pawns will not picnic if its bad weather
+Pawns will not picnic if its bad weather, unless changed in settings
 Picnic area needs seating but not tables
 If conditions are met and there are regular dining-areas available there is a 50% chance that they will eat at a picnic-area. If there are no available dining-areas they will always try to eat outside, if the conditions are met.
 
