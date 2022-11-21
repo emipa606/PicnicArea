@@ -14,11 +14,6 @@ public static class GenGrid_HasEatSurface_Patch
             return;
         }
 
-        //if (!PicnicArea.VerifyPicnicSpot(c, map))
-        //{
-        //    return;
-        //}
-
         if (!PicnicArea.VerifyPicnicConditions(map))
         {
             return;

@@ -19,7 +19,7 @@ public static class Pawn_RecordsTracker_AddTo_Patch
             return;
         }
 
-        if (!PicnicArea.VerifyPicnicConditions(__instance.pawn.Map))
+        if (!PicnicArea.VerifyPicnicConditions(__instance.pawn))
         {
             return;
         }

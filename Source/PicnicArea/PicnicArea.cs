@@ -17,6 +17,11 @@ public class PicnicArea
 
     public static bool VerifyPicnicSpot(Pawn pawn)
     {
+        if (pawn.DevelopmentalStage.Baby() && !pawn.Spawned)
+        {
+            return true;
+        }
+
         return VerifyPicnicSpot(pawn.Position, pawn.Map);
     }
 
@@ -43,6 +48,16 @@ public class PicnicArea
         }
 
         return false;
+    }
+
+    public static bool VerifyPicnicConditions(Pawn pawn)
+    {
+        if (pawn.DevelopmentalStage.Baby() && !pawn.Spawned)
+        {
+            return true;
+        }
+
+        return VerifyPicnicConditions(pawn.Map);
     }
 
     public static bool VerifyPicnicConditions(Map map)
