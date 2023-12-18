@@ -17,19 +17,20 @@ public class PicnicArea
 
     public static bool VerifyPicnicSpot(Pawn pawn)
     {
-        if (pawn.DevelopmentalStage.Baby() && !pawn.Spawned)
+        if (pawn is not { Spawned: true })
         {
             return true;
         }
 
-        return VerifyPicnicSpot(pawn.Position, pawn.Map);
+        return pawn.Map == null || VerifyPicnicSpot(pawn.Position, pawn.Map);
     }
 
     public static bool VerifyPicnicSpot(IntVec3 intVec3, Map map)
     {
-        var zonesList = map.zoneManager.AllZones;
-        foreach (var zone in zonesList)
+        // ReSharper disable once ForCanBeConvertedToForeach
+        for (var index = 0; index < map.zoneManager.AllZones.Count; index++)
         {
+            var zone = map.zoneManager.AllZones[index];
             if (zone is not Zone_PicnicArea picnicArea)
             {
                 continue;
@@ -37,7 +38,7 @@ public class PicnicArea
 
             if (picnicArea.cells.Count == 0)
             {
-                Log.ErrorOnce("Picnic zone has 0 cells (this should never happen): " + picnicArea, -563287);
+                Log.ErrorOnce($"Picnic zone has 0 cells (this should never happen): {picnicArea}", -563287);
                 continue;
             }
 
@@ -52,12 +53,12 @@ public class PicnicArea
 
     public static bool VerifyPicnicConditions(Pawn pawn)
     {
-        if (pawn.DevelopmentalStage.Baby() && !pawn.Spawned)
+        if (pawn is not { Spawned: true })
         {
-            return true;
+            return false;
         }
 
-        return VerifyPicnicConditions(pawn.Map);
+        return pawn.Map != null && VerifyPicnicConditions(pawn.Map);
     }
 
     public static bool VerifyPicnicConditions(Map map)

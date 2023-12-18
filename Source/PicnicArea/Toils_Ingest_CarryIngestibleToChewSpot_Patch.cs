@@ -108,7 +108,7 @@ public static class Toils_Ingest_CarryIngestibleToChewSpot_Patch
 
             if (picnicArea.cells.Count == 0)
             {
-                Log.ErrorOnce("Picnic zone has 0 cells (this should never happen): " + picnicArea, -563287);
+                Log.ErrorOnce($"Picnic zone has 0 cells (this should never happen): {picnicArea}", -563287);
                 continue;
             }
 

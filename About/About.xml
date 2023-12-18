@@ -20,7 +20,7 @@
   <loadAfter>
     <li>brrainz.harmony</li>
   </loadAfter>
-  <description>[img]https://i.imgur.com/buuPQel.png[/img]
+  <description>[img]https://i.imgur.com/iCj5o7O.png[/img]
 
 Mod that adds a picnic-area for pawns to eat in. 
 If they do, they will not get the "Ate without table-debuff"
@@ -35,7 +35,7 @@ Chinese translation added by HawnHan
 
 [table]
     [tr]
-        [td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
+        [td][url=https://dsc.gg/mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
         [td][url=https://github.com/emipa606/PicnicArea][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
     [/tr]
     [tr]
@@ -44,20 +44,21 @@ Chinese translation added by HawnHan
     [/tr]
 [/table]
 	
-[img]https://i.imgur.com/O0IIlYj.png[/img]
+[img]https://i.imgur.com/Ds0rBAD.png[/img]
 Since modding is just a hobby for me I expect no donations to keep modding. If you still want to show your support you can gift me anything from my [url=https://store.steampowered.com/wishlist/id/Mlie]Wishlist[/url] or buy me a cup of tea.
 
-[url=https://ko-fi.com/G2G55DDYD][img]https://i.imgur.com/Utx6OIH.png[/img][/url]
+[url=https://ko-fi.com/G2G55DDYD][img]https://i.imgur.com/VWG0yff.png[/img][/url]
 
-[img]https://i.imgur.com/PwoNOj4.png[/img]
+[img]https://i.imgur.com/5xwDG6H.png[/img]
 [list]
 [*] See if the the error persists if you just have this mod and its requirements active.
 [*] If not, try adding your other mods until it happens again.
-[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] and command Ctrl+F12
+[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] or the standalone [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Uploader[/url] and command Ctrl+F12
 [*] For best support, please use the Discord-channel for error-reporting.
 [*] Do not report errors by making a discussion-thread, I get no notification of that.
 [*] If you have the solution for a problem, please post it to the GitHub repository.
+[*] Use [url=https://github.com/RimSort/RimSort/releases/latest]RimSort[/url] to sort your mods
 [/list]
 
-</description>
+[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2429086505][img]https://img.shields.io/github/v/release/emipa606/PicnicArea?label=latest%20version&amp;style=plastic&amp;labelColor=0070cd&amp;color=white[/img][/url]</description>
 </ModMetaData>

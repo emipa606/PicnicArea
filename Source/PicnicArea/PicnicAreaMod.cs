@@ -17,7 +17,7 @@ internal class PicnicAreaMod : Mod
     /// <summary>
     ///     The private settings
     /// </summary>
-    private PicnicAreaSettings settings;
+    public readonly PicnicAreaSettings Settings;
 
     /// <summary>
     ///     Cunstructor
@@ -27,24 +27,8 @@ internal class PicnicAreaMod : Mod
     {
         instance = this;
         currentVersion =
-            VersionFromManifest.GetVersionFromModMetaData(ModLister.GetActiveModWithIdentifier("Mlie.PicnicArea"));
-    }
-
-    /// <summary>
-    ///     The instance-settings for the mod
-    /// </summary>
-    internal PicnicAreaSettings Settings
-    {
-        get
-        {
-            if (settings == null)
-            {
-                settings = GetSettings<PicnicAreaSettings>();
-            }
-
-            return settings;
-        }
-        set => settings = value;
+            VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
+        Settings = GetSettings<PicnicAreaSettings>();
     }
 
     /// <summary>
