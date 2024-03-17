@@ -12,9 +12,43 @@ public static class Toils_Ingest_CarryIngestibleToChewSpot_Patch
     [HarmonyPostfix]
     public static void Postfix(Pawn pawn, TargetIndex ingestibleInd, ref Toil __result)
     {
+        var possibleThing = GenClosest.ClosestThingReachable(pawn.Position, pawn.Map,
+            ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial), PathEndMode.OnCell,
+            TraverseParms.For(pawn),
+            32f, t => BaseChairValidator(t) && t.Position.GetDangerFor(pawn, t.Map) == Danger.None);
+
+        if (possibleThing != null && Rand.Bool)
+        {
+            return;
+        }
+
+        if (!PicnicArea.VerifyPicnicConditions(pawn.Map))
+        {
+            return;
+        }
+
+        var picnicSittable = getPicnicSittable(pawn);
+        if (picnicSittable == null)
+        {
+            PicnicArea.LogMessage("No good spot");
+            return;
+        }
+
+        var toil = new Toil();
+        toil.initAction = delegate
+        {
+            var actor = toil.actor;
+            actor.Reserve(picnicSittable, actor.CurJob);
+            actor.Map.pawnDestinationReservationManager.Reserve(actor, actor.CurJob, picnicSittable.Position);
+            actor.pather.StartPath(picnicSittable, PathEndMode.OnCell);
+        };
+        toil.defaultCompleteMode = ToilCompleteMode.PatherArrival;
+        __result = toil;
+        return;
+
         bool BaseChairValidator(Thing t)
         {
-            if (t.def.building == null || !t.def.building.isSittable)
+            if (t.def.building is not { isSittable: true })
             {
                 return false;
             }
@@ -59,39 +93,6 @@ public static class Toils_Ingest_CarryIngestibleToChewSpot_Patch
 
             return result;
         }
-
-        var possibleThing = GenClosest.ClosestThingReachable(pawn.Position, pawn.Map,
-            ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial), PathEndMode.OnCell,
-            TraverseParms.For(pawn),
-            32f, t => BaseChairValidator(t) && t.Position.GetDangerFor(pawn, t.Map) == Danger.None);
-
-        if (possibleThing != null && Rand.Bool)
-        {
-            return;
-        }
-
-        if (!PicnicArea.VerifyPicnicConditions(pawn.Map))
-        {
-            return;
-        }
-
-        var picnicSittable = getPicnicSittable(pawn);
-        if (picnicSittable == null)
-        {
-            PicnicArea.LogMessage("No good spot");
-            return;
-        }
-
-        var toil = new Toil();
-        toil.initAction = delegate
-        {
-            var actor = toil.actor;
-            actor.Reserve(picnicSittable, actor.CurJob);
-            actor.Map.pawnDestinationReservationManager.Reserve(actor, actor.CurJob, picnicSittable.Position);
-            actor.pather.StartPath(picnicSittable, PathEndMode.OnCell);
-        };
-        toil.defaultCompleteMode = ToilCompleteMode.PatherArrival;
-        __result = toil;
     }
 
     private static Thing getPicnicSittable(Pawn pawn)
@@ -141,7 +142,7 @@ public static class Toils_Ingest_CarryIngestibleToChewSpot_Patch
 
     private static bool Predicate(Thing thing, Pawn pawn)
     {
-        if (thing.def.building == null || !thing.def.building.isSittable)
+        if (thing.def.building is not { isSittable: true })
         {
             return false;
         }

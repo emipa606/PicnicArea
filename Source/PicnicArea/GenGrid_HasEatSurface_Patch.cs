@@ -24,7 +24,7 @@ public static class GenGrid_HasEatSurface_Patch
             var rot = new Rot4(i);
             var intVec = c + rot.FacingCell;
             var possibleChair = intVec.GetFirstThing<Thing>(map);
-            if (possibleChair?.def.building == null || !possibleChair.def.building.isSittable)
+            if (possibleChair?.def.building is not { isSittable: true })
             {
                 continue;
             }

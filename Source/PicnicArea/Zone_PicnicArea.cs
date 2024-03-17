@@ -4,19 +4,11 @@ using Verse;
 
 namespace PicnicArea;
 
-public class Zone_PicnicArea : Zone
+public class Zone_PicnicArea(ZoneManager zoneManager) : Zone("PicnicAreaZone".Translate(), zoneManager)
 {
-    private static readonly List<Color> picnicAreaZoneColors = new List<Color>();
+    private static readonly List<Color> picnicAreaZoneColors = [];
 
     private static int nextPicnicAreaZoneColorIndex;
-
-    public Zone_PicnicArea()
-    {
-    }
-
-    public Zone_PicnicArea(ZoneManager zoneManager) : base("PicnicAreaZone".Translate(), zoneManager)
-    {
-    }
 
     public override bool IsMultiselectable => false;
 

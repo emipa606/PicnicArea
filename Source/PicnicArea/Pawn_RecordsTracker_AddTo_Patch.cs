@@ -7,7 +7,7 @@ namespace PicnicArea;
 public static class Pawn_RecordsTracker_AddTo_Patch
 {
     [HarmonyPrefix]
-    public static void Postfix(RecordDef def, float value, ref Pawn_RecordsTracker __instance)
+    public static void Postfix(RecordDef def, ref Pawn_RecordsTracker __instance)
     {
         if (def != RecordDefOf.NutritionEaten)
         {

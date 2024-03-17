@@ -8,7 +8,7 @@ namespace PicnicArea;
 public static class MemoryThoughtHandler_TryGainMemory_Patch
 {
     [HarmonyPrefix]
-    public static bool Prefix(Thought_Memory newThought, Pawn otherPawn, ref MemoryThoughtHandler __instance)
+    public static bool Prefix(Thought_Memory newThought, ref MemoryThoughtHandler __instance)
     {
         if (newThought.def != ThoughtDefOf.AteWithoutTable)
         {
