@@ -1,5 +1,8 @@
 # Changelog for PicnicArea
 
+1.5.1 - Fixed loading issue
+
+
 1.5.0 - Mod updated for 1.5 and passed autotests
 
 
