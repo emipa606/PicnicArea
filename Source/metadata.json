@@ -2,7 +2,18 @@
   "Continued": false,
   "CanAdd": "0",
   "CanRemove": "2",
-  "PreviewVersion": "1.5",
+  "PreviewVersion": "1.6",
   "SocialImageSet": true,
-  "FundingSet": true
+  "FundingSet": true,
+  "Patches": true,
+  "Defs": true,
+  "Assemblies": true,
+  "LinesOfCode": 18683,
+  "LinesOfXML": 722,
+  "CodeBaseSize": 68,
+  "LastXmlCleaning": "2025-07-06T21:32:37.2489128+02:00",
+  "SearchTags": [
+    "outdoor",
+    " dining"
+  ]
 }

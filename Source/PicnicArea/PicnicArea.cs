@@ -10,9 +10,7 @@ public class PicnicArea
 {
     static PicnicArea()
     {
-        var harmony = new Harmony("mlie.PicnicArea");
-        var assembly = Assembly.GetExecutingAssembly();
-        harmony.PatchAll(assembly);
+        new Harmony("mlie.PicnicArea").PatchAll(Assembly.GetExecutingAssembly());
     }
 
     public static bool VerifyPicnicSpot(Pawn pawn)
@@ -63,7 +61,7 @@ public class PicnicArea
 
     public static bool VerifyPicnicConditions(Map map)
     {
-        var tempRange = PicnicAreaMod.instance.Settings.TemperatureRange;
+        var tempRange = PicnicAreaMod.Instance.Settings.TemperatureRange;
         var outsideTemp = map.mapTemperature.OutdoorTemp;
         if (outsideTemp < tempRange.min || outsideTemp > tempRange.max)
         {
@@ -71,8 +69,8 @@ public class PicnicArea
             return false;
         }
 
-        var startTime = PicnicAreaMod.instance.Settings.TimeStart;
-        var stopTime = PicnicAreaMod.instance.Settings.TimeStop;
+        var startTime = PicnicAreaMod.Instance.Settings.TimeStart;
+        var stopTime = PicnicAreaMod.Instance.Settings.TimeStop;
         var currentTime = GenLocalDate.HourOfDay(map);
         if (startTime < stopTime && currentTime < startTime || currentTime > stopTime ||
             startTime > stopTime && currentTime < startTime && currentTime > stopTime)
@@ -81,7 +79,7 @@ public class PicnicArea
             return false;
         }
 
-        if (PicnicAreaMod.instance.Settings.AnyWeather)
+        if (PicnicAreaMod.Instance.Settings.AnyWeather)
         {
             return true;
         }
@@ -111,7 +109,7 @@ public class PicnicArea
 
     public static void LogMessage(string message)
     {
-        if (PicnicAreaMod.instance.Settings.VerboseLogging)
+        if (PicnicAreaMod.Instance.Settings.VerboseLogging)
         {
             Log.Message($"[PicnicArea]: {message}");
         }

@@ -6,16 +6,15 @@ using Verse.AI;
 
 namespace PicnicArea;
 
-[HarmonyPatch(typeof(Toils_Ingest), "CarryIngestibleToChewSpot", typeof(Pawn), typeof(TargetIndex))]
-public static class Toils_Ingest_CarryIngestibleToChewSpot_Patch
+[HarmonyPatch(typeof(Toils_Ingest), nameof(Toils_Ingest.CarryIngestibleToChewSpot), typeof(Pawn), typeof(TargetIndex))]
+public static class Toils_Ingest_CarryIngestibleToChewSpot
 {
-    [HarmonyPostfix]
-    public static void Postfix(Pawn pawn, TargetIndex ingestibleInd, ref Toil __result)
+    public static void Postfix(Pawn pawn, ref Toil __result)
     {
         var possibleThing = GenClosest.ClosestThingReachable(pawn.Position, pawn.Map,
             ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial), PathEndMode.OnCell,
             TraverseParms.For(pawn),
-            32f, t => BaseChairValidator(t) && t.Position.GetDangerFor(pawn, t.Map) == Danger.None);
+            32f, t => baseChairValidator(t) && t.Position.GetDangerFor(pawn, t.Map) == Danger.None);
 
         if (possibleThing != null && Rand.Bool)
         {
@@ -46,7 +45,7 @@ public static class Toils_Ingest_CarryIngestibleToChewSpot_Patch
         __result = toil;
         return;
 
-        bool BaseChairValidator(Thing t)
+        bool baseChairValidator(Thing t)
         {
             if (t.def.building is not { isSittable: true })
             {
@@ -126,7 +125,7 @@ public static class Toils_Ingest_CarryIngestibleToChewSpot_Patch
             }
 
             currentMinRange = pawn.Position.DistanceTo(picnicArea.Position);
-            var sittables = picnicArea.AllContainedThings.Where(thing => Predicate(thing, pawn));
+            var sittables = picnicArea.AllContainedThings.Where(thing => predicate(thing, pawn));
 
             if (!sittables.Any())
             {
@@ -140,7 +139,7 @@ public static class Toils_Ingest_CarryIngestibleToChewSpot_Patch
         return returnValue;
     }
 
-    private static bool Predicate(Thing thing, Pawn pawn)
+    private static bool predicate(Thing thing, Pawn pawn)
     {
         if (thing.def.building is not { isSittable: true })
         {

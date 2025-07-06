@@ -4,10 +4,10 @@ using Verse;
 
 namespace PicnicArea;
 
-[HarmonyPatch(typeof(MemoryThoughtHandler), "TryGainMemory", typeof(Thought_Memory), typeof(Pawn))]
-public static class MemoryThoughtHandler_TryGainMemory_Patch
+[HarmonyPatch(typeof(MemoryThoughtHandler), nameof(MemoryThoughtHandler.TryGainMemory), typeof(Thought_Memory),
+    typeof(Pawn))]
+public static class MemoryThoughtHandler_TryGainMemory
 {
-    [HarmonyPrefix]
     public static bool Prefix(Thought_Memory newThought, ref MemoryThoughtHandler __instance)
     {
         if (newThought.def != ThoughtDefOf.AteWithoutTable)

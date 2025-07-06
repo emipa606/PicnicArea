@@ -20,7 +20,7 @@ public class Zone_PicnicArea : Zone
 
     public override bool IsMultiselectable => false;
 
-    protected override Color NextZoneColor => NextPicnicAreaZoneColor();
+    protected override Color NextZoneColor => nextPicnicAreaZoneColor();
 
     private static IEnumerable<Color> PicnicAreaZoneColors()
     {
@@ -30,7 +30,7 @@ public class Zone_PicnicArea : Zone
         yield return Color.Lerp(Color.yellow, Color.gray, 0.6f);
     }
 
-    private static Color NextPicnicAreaZoneColor()
+    private static Color nextPicnicAreaZoneColor()
     {
         picnicAreaZoneColors.Clear();
         foreach (var color in PicnicAreaZoneColors())

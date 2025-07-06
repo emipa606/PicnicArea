@@ -8,7 +8,7 @@ namespace PicnicArea;
 internal class PicnicAreaSettings : ModSettings
 {
     public bool AnyWeather;
-    public IntRange TemperatureRange = new IntRange(5, 35);
+    public IntRange TemperatureRange = new(5, 35);
     public int TimeStart = 8;
     public int TimeStop = 16;
     public bool VerboseLogging;

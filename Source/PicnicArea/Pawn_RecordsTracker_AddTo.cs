@@ -3,10 +3,9 @@ using RimWorld;
 
 namespace PicnicArea;
 
-[HarmonyPatch(typeof(Pawn_RecordsTracker), "AddTo", typeof(RecordDef), typeof(float))]
-public static class Pawn_RecordsTracker_AddTo_Patch
+[HarmonyPatch(typeof(Pawn_RecordsTracker), nameof(Pawn_RecordsTracker.AddTo), typeof(RecordDef), typeof(float))]
+public static class Pawn_RecordsTracker_AddTo
 {
-    [HarmonyPrefix]
     public static void Postfix(RecordDef def, ref Pawn_RecordsTracker __instance)
     {
         if (def != RecordDefOf.NutritionEaten)

@@ -3,10 +3,9 @@ using Verse;
 
 namespace PicnicArea;
 
-[HarmonyPatch(typeof(GenGrid), "HasEatSurface", typeof(IntVec3), typeof(Map))]
-public static class GenGrid_HasEatSurface_Patch
+[HarmonyPatch(typeof(GenGrid), nameof(GenGrid.HasEatSurface), typeof(IntVec3), typeof(Map))]
+public static class GenGrid_HasEatSurface
 {
-    [HarmonyPostfix]
     public static void Postfix(this IntVec3 c, Map map, ref bool __result)
     {
         if (__result)
