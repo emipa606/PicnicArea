@@ -8,10 +8,10 @@
   "Patches": true,
   "Defs": true,
   "Assemblies": true,
-  "LinesOfCode": 18683,
+  "LinesOfCode": 20029,
   "LinesOfXML": 722,
-  "CodeBaseSize": 68,
-  "LastXmlCleaning": "2025-07-06T21:32:37.2489128+02:00",
+  "CodeBaseSize": 67,
+  "LastXmlCleaning": "2025-11-29T20:59:06.1840093+01:00",
   "SearchTags": [
     "outdoor",
     " dining"

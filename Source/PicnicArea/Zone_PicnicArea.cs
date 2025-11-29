@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using RimWorld;
+using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 
@@ -47,6 +48,14 @@ public class Zone_PicnicArea : Zone
         }
 
         return result;
+    }
+    public override IEnumerable<Gizmo> GetGizmos()
+    {
+        yield return new Command_Hide_ZonePicnicArea(this);
+        foreach (Gizmo gizmo in base.GetGizmos())
+        {
+            yield return gizmo;
+        }
     }
 
     public override IEnumerable<Gizmo> GetZoneAddGizmos()
